@@ -28,7 +28,7 @@ schema_view = get_schema_view(
       description="Book Api",
       terms_of_service="https://fery/terms/",
       contact=openapi.Contact(email="fery@book.local"),
-      license=openapi.License(name="Fery License"),
+      license=openapi.License(name="Backend Test"),
    ),
    public=True,
    permission_classes=[permissions.AllowAny],
@@ -39,6 +39,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls')),
     path('api/book/', include('book.urls')),
+    path('api/loan/', include('loan.urls')),
 
     # Swagger
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

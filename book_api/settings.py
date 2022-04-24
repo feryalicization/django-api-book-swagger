@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'authentication',
     'book',
+    'loan',
     'drf_yasg',
 
 ]
@@ -50,6 +51,7 @@ INSTALLED_APPS = [
 
 
 SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
     'SECURITY_DEFINITIONS': {
         'api_key': {
             'type': 'apiKey',
@@ -137,9 +139,11 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = False
+
+DATETIME_FORMAT="%Y-%m-%d%H:%M:%S"
 
 
 

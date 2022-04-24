@@ -7,5 +7,5 @@ class BookSerializer(ModelSerializer):
     class Meta:
         model=Book
 
-        fields=['book_name', 'photo', 'is_loan']
+        fields=['id', 'book_name', 'photo', 'is_loan', 'created_date', 'updated_date']
 
